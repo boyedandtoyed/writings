@@ -1,0 +1,43 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'userprofile/login/css/login.css' %}">
+{% endblock style %}
+
+{% block navbar %}
+
+{% endblock navbar %}
+
+{% block main %}
+<div class="loginbox">
+  <form action="" method="post">
+    {% csrf_token %}
+    <h1>Enter Username and Password</h1>
+
+    <input type="text" placeholder="Username" name="username" id="username">
+    <input type="password" placeholder="Password" name="password" id="password">
+    <input type="submit" id="login" value="Login">
+{% if messages %}
+  <ul class="messages">
+    {% for message in messages %}
+    <li {% if message.tags %} class="{{ message.tags }}" {% endif %}>
+      {% if message.level == DEFAULT_MESSAGE_LEVELS.ERROR %}Important: {% endif %}
+      {{ message }}
+    </li>
+    {% endfor %}
+  </ul>
+  {% endif %}
+  </form>
+  
+
+  <a href="{% url 'userprofile:register' %}" target="register" id="register" rel="noopener noreferrer">
+    Register</a>
+</div>
+
+{% endblock main %}
+
+
+{% block script %}
+
+{% endblock script %}

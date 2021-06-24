@@ -1,0 +1,21 @@
+{% load static %}
+<nav>
+    <ul>
+        <li> <a href="{% url 'home:landingpage'  %}">Landing Page</a></li>
+        <li> <a href="{% url 'home:home'  %}">Browse</a></li>
+        <li><a href="{% url 'writings:create' %}">Write</a></li>
+        <li> <a href="{% url 'userprofile:logout' %}">Logout</a></li>
+        <li> <a href="{% url 'userprofile:profile' %}">Profile</a></li>
+    </ul>
+    <div class="toggle" tabindex="0">
+        <div class="button"></div>
+        <div class="darktext">DARK</div>
+        <div class="lighttext">LIGHT</div>
+    </div>
+    <div class="hamregion" tabindex="0">
+        <div class="ham"></div>
+    </div>
+
+    <img src="{% static 'components/navbar/images/pengreen.png' %}" alt="A hanging green pen" class="logo pengreen" />
+    <img src="{% static 'components/navbar/images/penblue.png' %}" alt="A hanging blue pen" class="logo penblue" />
+</nav>

@@ -1,0 +1,22 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'writings/writing/css/writing.css' %}">
+{% endblock style %}]
+
+{% block main %}
+
+<div class="writing">
+    <h1>{{writing.headline}}</h1>
+    <div class="coverImage">
+        {% if writing.cover %}
+        <img src="{{writing.cover.url}}" alt="{{writing.headline}}" />
+        {% else %}
+        <img src="//unsplash.it/270" alt="something fancy" />
+        {% endif %}
+    </div>
+    <div class='authorname' >Written by, {{writing.main_author.username}} at <span class="date">{{writing.post_date}}</span></div>
+        {{writing.textarea|safe}}
+</div>
+{% endblock main %}

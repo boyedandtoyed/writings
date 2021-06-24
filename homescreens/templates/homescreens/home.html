@@ -1,0 +1,24 @@
+{% extends "base/base.html" %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'homescreens/home/css/home.css' %}">
+{% endblock style %}
+
+{% block main %}
+<main>
+    {% for writing in writings %}
+   <a href="{% url 'writings:show_writing' writing.slug %}" title="{{writing.headline}}"> <div class="article">
+        <h1>{{writing.headline}}</h1>
+        
+        <div class="imageContainer">
+            {% if writing.cover %}
+            <img src="{{writing.cover.url}}" alt="{{writing.headline}}" />
+            {% else %}
+            <img src="//unsplash.it/270" alt="something fancy" />
+            {% endif %}
+        </div>
+    </div> </a>
+    {% endfor %}
+</main>
+{% endblock main %}

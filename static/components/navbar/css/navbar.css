@@ -1,0 +1,207 @@
+
+/* navigation bar features and tweaks */
+nav{
+    top: 0;
+    right: 0;
+    width:100%;
+    min-height:100px;
+    position: sticky;
+    z-index: 10;
+    margin-bottom: 20px;
+    background-color:var(--rootback-color);
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.171);
+}
+/* the navigation menu */
+nav ul{
+    position:relative;
+    color:var(--root-text-color);
+    display:flex;
+    gap:20px;
+    width:100%;
+    padding: 0 10px;
+}
+nav ul li{
+    text-align:center;
+    list-style:none;
+}
+nav ul a{
+    text-decoration: none;
+    color:var(--root-text-color);
+}
+nav ul li:nth-last-of-type(3){
+    margin-left:auto;
+}
+nav ul li:hover{
+    text-decoration:underline;
+    cursor:pointer;
+}
+/* for the smaller scrrensize class small is added to ul and when it does thhis happens */
+nav ul.small{
+display:flex;
+flex-direction:column;
+position:absolute;
+top:0;
+bottom:0;
+left:0;
+z-index: 1000;
+padding-top: 150px;
+width:75%;
+height: 100vh;
+background:linear-gradient(to top, #333, var(--rootback-color));
+}
+nav ul.small li:nth-last-of-type(3){
+    margin: 0;
+}
+
+
+/* for the global "association" toggler for green and blue mode and black modes
+is yet to be added in the future*/
+
+nav .toggle{
+    width:120px;
+    height:20px;
+    background-color:var(--root-text-color);
+    position:relative;
+    border-radius:10px;
+    display:inline-block;
+    cursor: pointer;
+    top: 10px;
+    left:10px;
+}
+
+nav .toggle .button{
+    height: 20px;
+    position: relative;
+    width: 20px;
+    left:100px;
+    border-radius:50%;
+    transition: all 0.3s ease-in-out;
+    background-color:var(--rootback-color);
+}
+nav .toggle:focus{
+    outline: 1px solid rgb(20, 17, 221);
+    outline-offset: 1px;  
+}
+/* texts that is inside the button */
+
+.toggle .darktext{
+    color: var(--rootback-color);
+    position: absolute;
+    line-height:20px;
+    top: 0px;
+    left:5px;
+    font-size:0.8rem;
+    font-weight:bold;
+    letter-spacing:0.7px;
+}
+
+.toggle .lighttext{
+    color: var(--rootback-color);
+    position: absolute;
+    display: none;
+    top:0px;
+    right: 5px;
+    line-height:20px;
+    font-size:0.8rem;
+    font-weight:bold;
+    letter-spacing:0.7px;
+}
+
+
+/* for hamburger menu */
+nav .hamregion{
+    width: 40px;
+    height:23px;
+    display: inline-block;
+    position: absolute;
+    right:0;
+    margin: 10px;
+    cursor: pointer;
+}
+nav .hamregion:focus{
+    outline: 1px solid rgb(20, 17, 221);
+    outline-offset: 1px;  
+}
+nav .ham {
+    width: 40px;
+    height:3px;
+    background-color:var(--root-text-color);
+    position: relative;
+    top: 0;
+    left:0;
+    transition:transform 0.2s ease-in-out;
+}
+
+
+nav .ham::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height:3px;
+    background-color:var(--root-text-color);
+    transition:transform 0.2s ease-in-out;
+    transform: translateY(10px);
+}
+nav .ham::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 40px;
+    height:3px;
+    background-color:var(--root-text-color);
+    transition:transform 0.2s ease-in-out;
+    transform: translateY(20px);
+}
+
+
+.cross .ham{
+    transform: translateX(-10px);
+    background:transparent;
+}
+.cross .ham::after{
+    background-color:red;
+    transform: translate(10px, 10px) rotateZ(45deg);
+    background-color:var(--root-text-color);
+
+}
+.cross .ham::before{
+    transform: translate(10px, 10px) rotateZ(-45deg);
+    background-color:red;
+    background-color:var(--root-text-color);
+} 
+
+/* the logo of hanging pen in the middle */
+.logo{
+width: 25px;
+position: absolute;
+top: 0;
+left:50%;
+transform: translateX(-50%);
+bottom:0;
+}
+
+.penblue{
+    display: none;
+}
+
+/* queries    
+ */
+
+ @media only screen and (max-width:650px){
+    nav ul{
+        display:none;
+    }
+
+}
+@media only screen and (min-width:651px){
+    nav .hamregion{
+        display:none;
+    }
+    
+    nav ul{
+        display:flex!important;
+    }
+}

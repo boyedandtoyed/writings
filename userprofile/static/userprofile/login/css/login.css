@@ -1,0 +1,159 @@
+body{
+    background: url('/static/userprofile/login/images/splash1.svg'), 
+    url('/static/userprofile/login/images/splash2.svg'),
+    url('/static/userprofile/login/images/splash3.svg'),
+    var(--rootback-color);
+    font-family: 'Caveat', cursive;
+    background-size: 60vw 90vh;
+    background-position:-20% 40%, 70% 50%, 140% 50%;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode:hard-light;
+    display: flex;
+    align-items: center;
+    justify-content:center;
+    width:100%;
+    min-height:100vh;
+}
+
+
+.loginbox{
+    width:50%;
+    min-height: 100%;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+}
+
+
+form > * {
+    border-radius: 10px;
+}
+form h1{
+    color:var(--root-text-color);
+    padding: 5px 20px;
+    background: var(--rootback-color);
+    width: 100%;
+    text-align: center;
+    }
+.loginbox form{
+    width:100%;
+    display: flex;
+    gap:10px;
+    flex-direction:column;
+    align-items: center;
+    justify-content:space-around;
+    margin-bottom: 120px;
+    /* align-content: space-around; */
+}
+/* 
+form input{
+    padding: 10px 10px 10px 15px;
+    outline: none;
+    background-color: rgb(141, 195, 226)
+}
+form #username,form #username + *{
+    width:100%;
+    height:45px;
+    font-size:1.5rem;
+}
+input, input::placeholder{
+    font-family: 'Caveat', cursive;
+}*/
+#login{
+    width:max-content;
+    outline: none;
+    border:none;
+    padding: 5px 20px;
+    font-weight:800;
+    font-size:2rem;
+    color:#001B7Bda;
+    background:#159B32c0;
+    transition: all 0.3s ease-in;
+    cursor:pointer;
+}
+#login:hover, #login:focus{
+    background:#001B7B;
+    color:#159B32c0;
+    box-shadow:0 4px 10px #001b7b63, 0 -4px 10px #001b7b63;
+    transform: scale(1.05);
+} 
+form > input{
+    border-radius:15px;
+    border: none;
+    width:100%;
+    font-size:1.5rem;
+    outline:none;
+    position: relative;
+    padding:10px 20px;
+    font-family: 'Caveat', cursive;
+    color:var(--root-text-color);
+    box-shadow:0px 0px 5px var(--root-text-color);
+    min-height:50px;
+    background:var(--rootback-color);
+}
+::placeholder{
+    color:var(--root-text-color);
+}
+input:focus{
+    box-shadow:0px 0px 15px var(--root-text-color);
+}
+form label{
+    background:var(--rootback-color);
+    font-size: 1.5rem;
+}
+
+#register{
+    position:relative;
+    padding:5px 20px;
+    width:max-content;
+    text-decoration: none;
+text-align: center;
+background:#001B7Bda;
+    color: #159B32c0;
+    transition: all 0.3s ease-in;
+    border-radius: 10px;
+    font-size:2rem;
+}
+#register:hover, #register:focus{
+    color:#001b7bda;
+    background:#159b32;
+    transform: scale(1.05);
+
+}
+#register:after{
+content:'Not registred yet?';
+font-size:1.5rem;
+position: absolute;
+color: #13117a;
+width: max-content;
+top:-50%;
+z-index: -1;
+border-radius: 10px;
+left:50%;
+/* text-shadow:0 4px 3px #0d090f; */
+padding: 5px 20px;
+transform: translate(-50%, -25%);
+background-color: rgba(71, 114, 255, 0.658);
+
+}
+@media only screen and (max-width:1400px) {
+
+    .loginbox{
+        width:35vw;
+    }
+}
+
+@media only screen and (max-width:900px){
+    .loginbox{
+        width: 70vw;
+    }
+   
+}
+@media only screen and (max-width:550px){
+    .loginbox{
+        width: 90vw;
+    }
+   
+}

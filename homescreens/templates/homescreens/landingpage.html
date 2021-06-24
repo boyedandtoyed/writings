@@ -1,0 +1,31 @@
+{% extends "base/base.html" %}
+{% load static %}
+{% block navbar %}
+      
+    {% endblock navbar %}
+{% block style %}
+<link rel="stylesheet" href="{% static 'homescreens/landingpage/css/landing.css' %}">
+{% endblock style %}
+
+{% block main %}
+<div class="hiddenpopper"></div>
+        <img src="{% static 'homescreens/landingpage/images/starstext.svg' %}" alt="TEXT" id='starstext'>
+        <img src="{% static 'homescreens/landingpage/images/by.svg' %}" alt="BY" id='BY'>
+        <img src="{% static 'homescreens/landingpage/images/feather.svg' %}" alt="Feather of different colors" id="feather">
+        <div class="loginreg">
+                <a href="{% url 'userprofile:login' %}" class="login">Login</a>
+                <h2>Come fly with us by logging in</h2>
+                <a href="{% url 'userprofile:register' %}" class="register">Register</a>
+        </div>
+        <img src="{% static 'homescreens/landingpage/images/writing.svg' %}" alt="writingtext" id='writingtext'>
+        <img src="{% static 'homescreens/landingpage/images/evil.svg' %}" id="girl" alt="A girl thinking what to write">
+
+{% endblock main %}
+
+{% block script %}
+<script src="{% static 'homescreens/landingpage/script/landing.js' %}"></script>
+
+
+{% endblock script %}
+
+

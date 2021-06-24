@@ -1,0 +1,263 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+.hiddenpopper{
+    position:absolute;
+    top:50vh;
+    left:50vw;
+    width:50px;
+    height:50px;
+    transform:translate(-50%, -50%);
+    /* display:none; */
+    /* background:red; */
+    transition: transform 2s ease-in;
+}
+
+img[src*="svg"]{
+position: absolute;
+display:block;
+}
+
+#starstext{
+    left: 10px;
+   
+  
+    /* grid-area:starstext; */
+}
+
+/* #stars{
+ grid-area: stars;
+} */
+#girl{
+    /* grid-area: girl; */
+    transform-origin:right bottom;
+    right: 0px;
+    bottom: 0px;
+}
+#feather{
+    /* grid-area: feather; */
+    left: 10px;
+    bottom:10px;
+}
+#writingtext{
+    /* grid-area: writingtext; */
+    top: 50vh;
+    left:10px;
+}
+
+#BY{
+/* grid-area: BY; */
+left: 20vw;
+top: 20vh;
+}
+.loginreg{
+    
+    right:50px;
+    position:absolute;
+    background: rgb(13, 185, 237);
+    display:flex;
+    flex-direction:column;
+    border-radius: 10%;
+    width:170px;
+    height: 200px;
+}
+.loginreg > h2{
+/* margin: auto; */
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+text-align: center;
+font-family: Vivaldi;
+width: max-content;
+font-style: italic;
+font-weight: normal;
+font-size: 26px;
+color: #000000;
+text-shadow: 0px 4px 10px rgba(0, 0, 0, 0.17);
+}
+
+.loginreg a{
+    text-decoration: none;
+    font: Vivaldi;
+    font-size: 2rem;
+    font-family:'Caveat', cursive;
+    padding:10px;
+    background: rgb(28, 187, 245);
+    cursor: pointer;
+    outline: none;
+    
+}
+.loginreg a.register{
+    width:100%;
+    text-align: right;
+
+z-index: 1;
+color:#159B32;
+}
+.loginreg a.login{
+    text-align: left;
+    width:100%;
+margin-bottom: auto;
+color:#2908F0;
+
+}
+.loginreg a.register:hover, .loginreg a.register:focus{
+box-shadow: 0px 4px 10px #159b3246, 0px -4px 10px #159b3246;
+outline: none;
+transform:scale(1.1);
+
+}
+.loginreg a.login:hover, .loginreg a.login:focus{
+box-shadow: 0px 4px 10px #2908F046, 0px -4px 10px #2908F046 ;
+outline: none;
+transform:scale(1.1);
+}
+
+#wing2{
+    position: absolute;    
+    top: 50%;
+    left: 50%;
+    transform:rotateY(180deg) scale(0.7) ;
+}
+#wing1{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform:scale(0.7);
+}
+
+
+@media only screen and (max-width:1380px){
+    #girl{
+        transform: scale(0.8)!important;
+    }
+    /* .loginreg{
+        
+    transform: translateX(-100%);
+    left:100vw;
+    } */
+
+}
+@media only screen and (max-width:1250px){
+    #starstext{
+        transform-origin: left;
+     transform: scale(0.7);
+    }
+    #writingtext{
+        transform-origin: left;
+        transform: scale(0.7);
+    }
+    
+    #BY{
+        transform-origin: left;
+        transform: scale(0.7);
+    }
+}
+@media only screen and (max-width:1250px){
+    #starstext{
+        transform-origin: left;
+     transform: scale(0.7);
+    }
+    #writingtext{
+        transform-origin: left;
+        transform: scale(0.7);
+    }
+    
+    #BY{
+        transform-origin: left;
+        transform: scale(0.7);
+    }
+}
+@media only screen and (max-width:1050px){
+   
+    #writingtext{
+        /* grid-area: writingtext; */
+        top: 35vh;
+        left:10px;
+    }
+    
+    #BY{
+    /* grid-area: BY; */
+    left: 20vw;
+    top: 13vh;
+    }
+    #girl{
+        transform: scale(0.7)!important;
+      
+    }
+}
+@media only screen and (max-width:960px){
+   
+    #starstext{
+        transform-origin: left;
+     transform: scale(0.6);
+    }
+    #writingtext{
+        transform-origin: left;
+        transform: scale(0.6);
+    }
+    
+    #BY{
+        transform-origin: left;
+        transform: scale(0.6);
+    }
+    
+    /* #girl{
+        transform: scale(0.7)!important;
+    } */
+    #feather{
+        top:50vh;
+        transform-origin: left;
+        transform: scale(0.8);
+    }
+    
+}
+@media only screen and (max-width:800px){
+   
+    #starstext{
+        transform-origin: left;
+     transform: scale(0.6);
+    }
+    #writingtext{
+        transform-origin: left;
+        transform: scale(0.6);
+    }
+    
+    #BY{
+        transform-origin: left;
+        transform: scale(0.6);
+    }
+ 
+    #feather{
+        top:42vh;
+        transform-origin: left;
+        transform: scale(0.8);
+    }
+    .loginreg{
+        top:100px;
+        transform: scale(0.8)!important;
+    height: 150px;
+
+
+    }
+ #girl{
+        transform: scale(0.5)!important;
+    }    
+    
+}
+
+@media only screen and (max-width:550px){
+    #feather{
+        top:20vh;
+        transform: scale(0.5) rotate(-10deg);
+        opacity: 0.3;
+    }
+}
+
+@media only screen and (max-width:450px){
+    #feather{
+        top:30vh;
+        transform: scale(1) rotate(5deg);
+        opacity: 0.3;
+    }
+}

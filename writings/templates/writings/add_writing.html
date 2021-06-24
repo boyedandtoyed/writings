@@ -1,0 +1,38 @@
+{% extends 'base/base.html' %}
+{% load static %}
+
+
+{% block style %}
+<link rel="stylesheet" href="{% static 'writings/add_writing/css/add_writing.css' %}" />
+
+
+{% endblock style %}
+
+
+{% block main %}
+<form action="" method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    {{form.media}}
+    {{form}}
+    
+     <!-- {{ form.headline.label_tag }}
+     {{ form.headline }}
+     {{form.textarea.label_tag}}
+     {{form.textarea}} -->
+     {% comment %}
+    <label for="headline">Enter your consice Headline in less than 120 characters to grab reader.</label>
+    <input id="headline" type="text" placeholder="e.g:- A question for liberty, that changed me." />
+    <label for="users"> Make sure the users you select to collaborate are authentic because although they cannot
+        delete your text, they can easily modify them.(At most two) </label>
+    <input type="text" name="users" id="users" placeholder="Assign users you want to collaborate with." />
+    <label for="text">Write your writings that is at least 100 words and no more than 2000 words. So that you can
+        pin point your ideas and make room for people to read more in less time.</label> <textarea id="text"
+        placeholder="Fill it with you unique pen."></textarea>
+    <label for="tags">Add tags so that people can see search your article. We recommend to add at least two
+        tags</label> <input type="text" name="tags" id="tags" />
+        {% endcomment %}
+    <input type="submit" value="Submit" id="submit" />
+</form>
+{% endblock main %}
+
+

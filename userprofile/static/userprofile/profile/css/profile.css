@@ -1,0 +1,80 @@
+
+main{
+    max-width: 100%;
+    min-height: 100vh;
+    margin: 20px;
+    background: var(--rootback-color);
+    box-shadow:1px 1px 10px rgba(0, 0, 0, 0.445) inset;
+}
+main h1{
+    grid-column: 1/3;
+    text-align: center;
+    margin: 10px;
+    text-transform: uppercase;
+    text-decoration: underline ;
+    text-decoration-thickness:1.5px;
+    width: 80%;
+    color:var(--root-text-color);
+}
+main form{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    width:clamp(300px,100%, 850px);
+}
+
+main form *{
+    padding: 10px;
+    margin:10px;
+    outline:none;
+    border-radius:10px;
+    font-size:clamp(0.9rem, 2vw, 1.1rem);
+}
+main form label{
+    color:var(--root-text-color);
+    text-align:center;
+}
+main form #save{
+color: rgb(255, 255, 255);
+background-color: rgb(75, 75, 75);
+cursor: pointer;
+width: clamp(200px, 30vw, 60%);
+margin: auto;
+border: none;
+text-transform: uppercase;
+transition: all 0.3s ease-in-out;
+}
+main form #save:hover, main form #save:focus{
+    transform: scale(1.01);
+    background-color: rgba(4, 0, 255, 0.753);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.356);
+}
+input:read-only{
+    background:rgba(238, 68, 68, 0.438);
+    color:rgb(0, 89, 255);
+}
+main a{
+    text-decoration: none;
+    color:var(--root-text-color);
+    text-align: center;
+    display: block;
+    width: clamp(200px, 10vw, 20%);
+    margin: auto;
+    border: none;text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+}
+main a:hover, main a:focus{
+    transform: scale(1.01);
+    background-color: rgba(4, 0, 255, 0.753);
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.356);
+}
+@media only screen and (max-width:650px){
+
+    main form{
+        grid-template-columns: 1fr;
+        width: 100%;
+    }
+    main h1{
+    width: 100%;
+    font-size:1.4rem;
+    }
+}

@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Lemonada&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Caveat&display=swap');
+
+:root{  
+    --dark-back:#353232;
+    --text-during-dark:#e9e9e9;
+    --light-back:#ccccc3;
+    --text-during-light:#242323;
+    --rootback-color:var(--light-back);
+    --root-text-color:var(--text-during-light);
+    font-family: 'Lemonada', cursive;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+*::selected{
+    background-color:var(--dark-back);
+}
+body{
+    background-color: var(--rootback-color);
+}
+
+
+/* styling for flash messages framework */
+
+li.success{
+    font-size: 1.5rem;
+    color:rgb(0, 255, 0);
+    background:rgb(235, 235, 235);
+    padding:5px;
+}
+
+li.info{
+    font-size: 1.5rem;
+    color:rgb(255, 0, 0);
+    background:rgb(235, 235, 235);
+    padding:5px;
+}
+
+li.success::marker, li.info::marker{
+    content:""
+}
